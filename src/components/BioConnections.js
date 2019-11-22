@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import MentorList from "./MentorList";
+import MentorConnections from "./MentorConnections";
 
 export default function BioConnections({ publicId }) {
   const [bios, setBios] = useState([]);
@@ -22,6 +22,6 @@ export default function BioConnections({ publicId }) {
   }, [url]);
 
   if (bios) {
-    return isLoading ? <div>Loading</div> : <MentorList bios={bios} />;
+    return isLoading ? <div>Loading</div> : <MentorConnections bios={bios} />;
   }
 }
