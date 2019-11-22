@@ -7,14 +7,15 @@ import "../App.css";
 export default function MentorDetail(props) {
   const { publicId } = useParams();
   const [bio, setbio] = useState(null);
+  let url = `https://cors-anywhere.herokuapp.com/https://torre.bio/api/bios/${publicId}`;
 
   useEffect(() => {
     Axios.get(
-      `https://cors-anywhere.herokuapp.com/https://torre.bio/api/bios/${publicId}`
+      url
     )
       .then(response => setbio(response.data))
       .catch(err => console.log(err));
-  }, [publicId]);
+  }, [publicId, url]);
 
   if (bio) {
     return (

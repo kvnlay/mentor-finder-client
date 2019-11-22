@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function MentorCard({ bio }) {
-  console.log(bio);
   const { name, professionalHeadline, publicId } = bio;
   let url = `/mentors/${publicId}`;
   return (
