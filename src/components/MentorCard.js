@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function MentorCard(props) {
-  const { name, professionalHeadline, publicId } = props.bio;
+export default function MentorCard({ bio }) {
+  console.log(bio);
+  const { name, professionalHeadline, publicId } = bio;
   let url = `/mentors/${publicId}`;
   return (
     <div className="card mb-2 bg-light " style={{ width: "18rem" }}>

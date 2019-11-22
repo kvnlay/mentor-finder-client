@@ -17,7 +17,6 @@ export default function MentorDetail(props) {
   }, [publicId]);
 
   if (bio) {
-    console.log(bio);
     return (
       <div className="d-flex flex-column">
         <div className="bio_info d-flex">
